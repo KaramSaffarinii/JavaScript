@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  font-family: system-ui;
+  background-color: #00ffff;
+}
+
+span {
+  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: monospace;
+}

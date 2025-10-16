@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="soloButton">Generate New Random Color</button>
+    <button id="resetColor">Reset The Original Color</button>
+    <script>
+      let intervalId;
+      document
+        .getElementById("soloButton")
+        .addEventListener("click", function () {
+          clearInterval(intervalId);
+
+          intervalId = setInterval(function () {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(
+              16
+            );
+            document.body.style.backgroundColor = "#" + randomColor;
+            color.innerHTML = "#" + randomColor;
+          }, 1000);
+        });
+
+      document
+        .getElementById("resetColor")
+        .addEventListener("click", function () {
+          clearInterval(intervalId);
+
+          document.body.style.backgroundColor = "#00ffff";
+        });
+    </script>
+  </body>
+</html>
